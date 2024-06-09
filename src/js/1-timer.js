@@ -3,8 +3,7 @@ import "izitoast/dist/css/iziToast.min.css";
 
 import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
-
-    
+   
   const refs = {
         startButton: document.querySelector('[data-start]'),
         dateTimePicker: document.querySelector('#datetime-picker'),
@@ -14,8 +13,6 @@ import "flatpickr/dist/flatpickr.min.css";
         seconds: document.querySelector('[data-seconds]'),
     };
     let userSelectedDate;
-    
-
     const options = {
         enableTime: true,
         time_24hr: true,
@@ -25,8 +22,13 @@ import "flatpickr/dist/flatpickr.min.css";
             userSelectedDate = selectedDates[0];
             if (userSelectedDate <= new Date()) {
                 iziToast.error({
-                    title: 'ERROR',
+                    title: 'Error',
                     message: 'Please choose a date in the future',
+                    position: 'topRight',
+                    backgroundColor: '#ef4040',
+                    messageColor: '#fff',
+                    titleColor: '#fff',
+                    theme: 'dark',
                 });
                 refs.startButton.disabled = true;
             } else {
