@@ -26,8 +26,6 @@ import "flatpickr/dist/flatpickr.min.css";
                     message: 'Please choose a date in the future',
                     position: 'topRight',
                     backgroundColor: '#ef4040',
-                    messageColor: '#fff',
-                    titleColor: '#fff',
                     theme: 'dark',
                 });
                 refs.startButton.disabled = true;

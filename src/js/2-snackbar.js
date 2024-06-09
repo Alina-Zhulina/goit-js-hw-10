@@ -28,6 +28,8 @@ refs.form.addEventListener('submit', (e) => {
                 title: "Success",
                 message: message,
                 position: "topRight",
+                theme: 'dark',
+                backgroundColor: '#59a10d',
             });
         })
         .catch((error) => {
@@ -35,6 +37,8 @@ refs.form.addEventListener('submit', (e) => {
                 title: "Error",
                 message: error,
                 position: "topRight",
+                theme: 'dark',
+                backgroundColor: '#ef4040;',
             });
         });
 });
